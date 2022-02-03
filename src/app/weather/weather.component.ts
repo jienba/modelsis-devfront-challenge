@@ -18,9 +18,10 @@ export class WeatherComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.getCurrentCityData()
     }
 
-    getCurrentCity() {
+    getCurrentCityData() {
         navigator.geolocation.getCurrentPosition(position => {
             const {latitude} = position.coords;
             const {longitude} = position.coords;
@@ -31,20 +32,7 @@ export class WeatherComponent implements OnInit {
                         // console.log('city');
                         // console.log(this.city);
 
-                        this.weatherAPI.getWeatherData(this.city.woeid)
-                            .subscribe(value1 => {
-                                // @ts-ignore
-                                [this.currentWeatherData] = value1.consolidated_weather;
-                                console.log(this.currentWeatherData);
-
-                                // @ts-ignore
-                                let {consolidated_weather} = value1;
-                                this.consolidated_weather = consolidated_weather;
-
-                                console.log(this.consolidated_weather);
-
-
-                            })
+                        this.onGetDataWeather(this.city.woeid)
                     },
                     error => {
                         console.log(error)
@@ -53,6 +41,21 @@ export class WeatherComponent implements OnInit {
         }, positionError => {
 
         })
+    }
+
+    onGetDataWeather(woeid: number) {
+        this.weatherAPI.getWeatherData(woeid)
+            .subscribe(value => {
+                // @ts-ignore
+                [this.currentWeatherData] = value.consolidated_weather;
+                console.log(this.currentWeatherData);
+
+                // @ts-ignore
+                let {consolidated_weather} = value;
+                this.consolidated_weather = consolidated_weather;
+
+                console.log(this.consolidated_weather);
+            })
     }
 
 
