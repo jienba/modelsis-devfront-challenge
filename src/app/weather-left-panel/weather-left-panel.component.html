@@ -1,12 +1,19 @@
+<!--LEFT PANEL TEMPLATE-->
 <div id="main">
     <div class="panel-left"></div>
     <div id="weather-today">
         <div class="row">
             <div class="col-5">
-                <button class="btn btn-secondary btn-lg  mt-3 p-2" type="button" (click)="openSideBar()">Search for places</button>
+                <button (click)="openSideBar()"
+                        class="btn btn-secondary btn-lg  mt-3 p-2"
+                        type="button">
+                    Search for places
+                </button>
             </div>
             <div class="col offset-5">
-                <button class="btn btn-secondary btn-lg mt-3 p-2" type="button"><i class="fa  fa-2x fa-compass" aria-hidden="true"></i></button>
+                <button class="btn btn-secondary btn-lg mt-3 p-2" type="button">
+                    <i aria-hidden="true" class="fa  fa-2x fa-compass"></i>
+                </button>
             </div>
 
         </div>
@@ -35,14 +42,15 @@
 
         <div class="row">
             <div class="col text-center" style="margin-top: 10%">
-                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Dakar</p>
+                <p><i aria-hidden="true" class="fa fa-map-marker"></i> Dakar</p>
             </div>
         </div>
     </div>
 
-    <div id="form-search" *ngIf="isSideBarOpen">
+    <!--    SIDE BAR FOR GETTING WEATHER DATA USING CITY'S NAME-->
+    <div *ngIf="isSideBarOpen" id="form-search">
         <div class="row justify-content-center">
-            <button class="btn btn-default col-1 offset-10 fw-bolder fs-3" (click)="closeSideBar()">X</button>
+            <button (click)="closeSideBar()" class="btn btn-default col-1 offset-10 fw-bolder fs-3">X</button>
         </div>
         <div class="row justify-content-center">
             <div class="col text-center" style="margin-top: 5%">
@@ -58,7 +66,7 @@
             </div>
         </div>
     </div>
-
+    <!--    SIDE BAR FOR GETTING WEATHER DATA USING CITY'S NAME-->
 
 </div>
 

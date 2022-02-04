@@ -13,7 +13,7 @@ export class WeatherForecastComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-
+        // DUE TO SLOWNESS OF API CALL, MAKING A TIMEOUT TO AVOID GETTING UNDEFINED THE FORECAST  WEATHER DATA
         setTimeout(() => {
             if (this.foreCasts.length > 0){
                 this.isDataAvailable = !this.isDataAvailable;
