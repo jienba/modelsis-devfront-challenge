@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-weather-left-panel',
-  templateUrl: './weather-left-panel.component.html',
-  styleUrls: ['./weather-left-panel.component.css']
+    selector: 'weather-left-panel',
+    templateUrl: './weather-left-panel.component.html',
+    styleUrls: ['./weather-left-panel.component.css']
 })
 export class WeatherLeftPanelComponent implements OnInit {
+    isSideBarOpen: boolean = false;
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
+    openSideBar() {
+        this.isSideBarOpen = true;
+    }
+
+    closeSideBar() {
+        this.isSideBarOpen = false
+    }
 }

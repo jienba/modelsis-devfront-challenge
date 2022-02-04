@@ -1,0 +1,94 @@
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+.pt-1 {
+    padding-top: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.card-weather {
+    background-color: #1e213b;
+    height: 30vh;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.weather-card-foreCast {
+    height: 20vh;
+    background-color: #1e213b;
+    width: 100%;
+    margin-right: 5%;
+}
+
+.object-cover {
+    object-fit: contain;
+}
+
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.w-1\/2 {
+    width: 50%;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+img {
+    width: 50%;
+}
+

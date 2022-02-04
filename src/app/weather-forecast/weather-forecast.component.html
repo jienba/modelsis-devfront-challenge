@@ -1,1 +1,21 @@
-<p>weather-forecast works!</p>
+<div class="col offset-10 justify-content-center mt-4">
+    <span class="px-1.5 unit-cel ">℃</span>
+    <span class="px-1.5 unit-fr">℉</span>
+</div>
+
+<div class="row justify-content-center">
+    <div *ngFor="let foreCoast of foreCasts; index as i" class="col-md-2 col-sm-6  mb-3">
+        <div class="weather-card-foreCast m-3 text-center pt-4 justify-content-center ">
+            <span class="text-center mt-1">{{  i === 0 ? 'Tomorrow' : convertToDate(foreCoast.applicable_date) |  date: 'EEEE, d MMMM ' }}</span>
+            <div class="image-wrapper justify-content-center">
+                <img [src]="'assets/'+foreCoast.weather_state_abbr+'.png'" alt="Clear" class="img-fluid">
+            </div>
+            <div class="flex justify-around my-4 mx-2">
+                <span class="temp">{{foreCoast.min_temp |  number : '1.1-1'}}°C</span>
+                <span class="temp">{{foreCoast.max_temp |  number : '1.1-1'}}°C</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
