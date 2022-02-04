@@ -31,9 +31,6 @@ export class WeatherComponent implements OnInit {
                     value => {
                         [this.city] = value;
                         this.onGetDataWeather(this.city.woeid)
-                    },
-                    error => {
-                        console.log(error)
                     }
                 )
         }, positionError => {
