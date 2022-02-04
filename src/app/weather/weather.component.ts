@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {WeatherService} from "../services/weather.service";
 import {City} from "../interfaces/city";
 import {WeatherData} from "../interfaces/weatherData";
@@ -12,6 +12,7 @@ export class WeatherComponent implements OnInit {
     city!: City;
     consolidated_weather!: WeatherData[];
     currentWeatherData!: WeatherData;
+    @Input() public foreCasts!: WeatherData[];
 
 
     constructor(private weatherAPI: WeatherService) {

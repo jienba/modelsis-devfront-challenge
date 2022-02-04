@@ -1,8 +1,9 @@
 <weather-forecast [foreCasts]="consolidated_weather"></weather-forecast>
 
+
 <div class="container-fluid mt-3">
 
-    <h3>Today’s Hightlights</h3>
+    <h3 class="offset-1">Today’s Hightlights</h3>
     <div class="row justify-content-center">
         <div class="col-md-5 m-3 text-center p-5 card-weather">
             <h5 class="mt-4">
@@ -12,7 +13,7 @@
                 {{ wind_speed |  number : '1.1-1'}}mhp
             </h2>
             <div class="mt-3">
-                {{wind_direction_compass}}
+                <i class="fa fa-compass" aria-hidden="true"></i> {{wind_direction_compass}}
             </div>
         </div>
         <div class="col-md-5 m-3 text-center p-5 card-weather">

@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {WeatherData} from "../interfaces/weatherData";
 
 @Component({
     selector: 'weather-left-panel',
@@ -7,6 +8,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class WeatherLeftPanelComponent implements OnInit {
     isSideBarOpen: boolean = false;
+    @Input() public currentWeatherData!: WeatherData;
+
 
     constructor() {
     }

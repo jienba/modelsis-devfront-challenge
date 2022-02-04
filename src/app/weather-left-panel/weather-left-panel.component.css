@@ -43,7 +43,8 @@
 .search .fa-search {
     position: absolute;
     top: 20px;
-    left: 16px
+    left: 16px;
+    color: #424775;
 }
 
 .search button {
